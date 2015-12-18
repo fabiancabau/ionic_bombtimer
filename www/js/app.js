@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic', 'ngCordova'])
+angular.module('csgo_bombtimer', ['ionic', 'csgo_bombtimer.controllers', 'ngCordova'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -21,34 +21,4 @@ angular.module('starter', ['ionic', 'ngCordova'])
       StatusBar.styleDefault();
     }
   });
-});
-
-
-angular.module('starter')
-  .controller("BarcodeController", function($scope, $cordovaBarcodeScanner) {
- 
-    $scope.scanBarcode = function() {
-        $cordovaBarcodeScanner.scan().then(function(imageData) {
-            alert(imageData.text);
-            console.log("Barcode Format -> " + imageData.format);
-            console.log("Cancelled -> " + imageData.cancelled);
-        }, function(error) {
-            console.log("An error happened -> " + error);
-        });
-    };
- 
-});
-
-
-angular.module('starter')
-.config(function($stateProvider) {
-  $stateProvider
-        .state('app.index', {
-           url: '/',
-           views : {
-               templateUrl: 'templates/billing/prices.html',
-               controller : "PricesController"
-             }
-           }
-         );
 });

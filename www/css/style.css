@@ -1,1 +1,8 @@
 /* Empty. Add your own CSS if you like */
+.big-icon {
+	font-size:128px;
+}
+
+button > i.big-icon::before {
+    font-size: 128px;
+}
