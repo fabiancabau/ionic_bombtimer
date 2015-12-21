@@ -1,7 +1,26 @@
 <ion-view title="Countdown" view-title="Countdown">
-	<ion-content padding="true">
-		<button class="button" ng-click="startCountdown()">Start Countdown</button>
-		{{countDown}}
+	<ion-content class="padding">
+
+
+
+		<div class="card">
+		<div class="item" style="text-align:center;border:0px;">
+		  	<div style="width:256px;height:200px;display:inline-block" ng-click="scanBarcode()">
+		  		<i class="icon ion-clock big-icon"></i>
+		  		<br>
+		  		<br>
+		  		<br>
+		  		<span style="font-size:64px;">{{countDown}}</span>
+		  	</div>
+	  	</div>
+	  	</div>
+
+	  	<br>
+
+		{{message}}
+
+
+		
 	</ion-content>
 
 </ion-view>
